@@ -6,6 +6,14 @@ public class AccountDetails {
     private String login;
     private long balance;
     Scanner scanner = new Scanner(System.in);
+
+    public void deposit(){
+        System.out.println("Provide tha amount of cash, You want to deposit.");
+        long deposit = scanner.nextLong();
+       balance= deposit + balance;
+
+    }
+
     public void createAccount(){
         System.out.println("Provide Account name:");
         name = scanner.next();

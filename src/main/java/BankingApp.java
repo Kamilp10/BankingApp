@@ -9,11 +9,14 @@ public class BankingApp {
         account.createAccount();
         int inputNumber;
         do {
-            System.out.println("Wybierz co chcesz zrobić.\n1.Pokaż informacje o koncie.\n2.Wpłata gotówki.\n3.wypłata.\n4.Wyjście.");
+            System.out.println("Choose an available option.\n1.Show account details.\n2.Cash deposit.\n3.Cash withdrawal.\n4.Exit.");
             inputNumber = scanner.nextInt();
             switch (inputNumber) {
                 case 1:
                     account.showAccount();
+                    break;
+                case 2:
+                    account.deposit();
                     break;
             }
         }
