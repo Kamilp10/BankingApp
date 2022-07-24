@@ -8,10 +8,20 @@ public class AccountDetails {
     Scanner scanner = new Scanner(System.in);
 
     public void deposit(){
-        System.out.println("Provide tha amount of cash, You want to deposit.");
+        System.out.println("Provide tha amount of cash, You want to deposit:");
         long deposit = scanner.nextLong();
        balance= deposit + balance;
 
+    }
+
+    public void withdrawal(){
+        System.out.println("Provide the amount of cash, You want to withdraw:");
+        long withdrawal = scanner.nextLong();
+        if(withdrawal>balance){
+            System.out.println("You do not have sufficient funds in your bank account.");
+        }else{
+            balance = balance - withdrawal;
+        }
     }
 
     public void createAccount(){
