@@ -24,6 +24,14 @@ public class AccountDetails {
         }
     }
 
+    public void setBalance(long balance) {
+        this.balance = balance;
+    }
+
+    public long getBalance() {
+        return balance;
+    }
+
     public void createAccount(){
         System.out.println("Provide Account name:");
         name = scanner.next();
